@@ -29,7 +29,6 @@ Insert the images in their appropriate places.
 Publish the website in the LocalHost.
 
 # PROGRAM:
-# OUTPUT:
 ```
 urls.py
 
@@ -82,5 +81,8 @@ def cover(request):
 </body>
 </html>
 ```
+
+# OUTPUT:
+![alt text](<Screenshot 2025-12-18 212717.png>)
 # RESULT:
 The program for designing book front cover page using HTML and CSS is completed successfully.
