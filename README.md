@@ -30,5 +30,57 @@ Publish the website in the LocalHost.
 
 # PROGRAM:
 # OUTPUT:
+```
+urls.py
+
+from django.contrib import admin
+from django.urls import path
+from myapp import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',views.cover,name='home')
+]
+```
+```
+views.py
+
+from django.shortcuts import render
+def cover(request):
+    return render (request,'cover.html')
+```
+```
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOOK COVER</title>
+
+ 
+  <link rel="stylesheet" href="{% static 'book.css' %}">
+</head>
+<body>
+
+  <div class="book-container">
+
+    <div class="title">WALK INTO THE SHADOW</div>
+    <div class="subtitle">The shifty shadows that transforms world</div>
+
+    <span class="edition"><strong>ORIGINAL EDITION</strong></span>
+    <hr class="top">
+    <hr class="bottom">
+
+    <span class="author">BENEDICT JULIUS</span>
+
+    <img src="{% static 'bc.jpg' %}" alt="Book Cover" class="book-cover">
+    <div class="inner-border"></div>
+
+  </div>
+
+</body>
+</html>
+```
 # RESULT:
 The program for designing book front cover page using HTML and CSS is completed successfully.
